@@ -25,6 +25,9 @@
     .arrow {
         display: none;
     }
+    .uparrow {
+        display: none;
+    }
     section, .section-container {
         height: fit-content;
     }

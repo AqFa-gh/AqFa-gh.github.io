@@ -6,6 +6,7 @@
     <title>AqFa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 <body>
     <nav id="desktop-nav">
@@ -15,6 +16,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Media</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -31,6 +33,7 @@
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#media" onclick="toggleMenu()">Media</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
@@ -42,10 +45,10 @@
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">AqFa</h1>
-            <p class="section__text__p2">Video editor & Streamer</p>
+            <p class="section__text__p2">Video editor & IT Support</p>
             <div class="btn-container">
-                <button class="btn btn-color-1" onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
+                <button class="btn btn-color-1" onclick="window.open('./assets/resume.pdf')">
+                    Resume
                 </button>
                 <button class="btn btn-color-2" onclick="location.href=('./#contact')">
                     Contact Info
@@ -69,9 +72,21 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>1+ years <br>Video Editor</p>
+                        <h2 class="experience-sub-title">Experience</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                                <div>
+                                    <h3>Video Editor</h3>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                                <div>
+                                    <h3>Network Technician</h3>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                     <div class="details-container">
                         <img src="./assets/education.png" alt="Education icon" class="icon">
@@ -88,7 +103,7 @@
     </section>
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+        <h1 class="title">Skills</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -194,7 +209,7 @@
                 <h2 class="experience-sub-title project-title">Project One</h2>
                 <div class="btn-container">
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.fiverr.com/aqua_wispkeeper')">
-                        Fiverr
+                        blank
                     </button>
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.fiverr.com/aqua_wispkeeper')">
                         Live Demo
@@ -208,7 +223,7 @@
                 <h2 class="experience-sub-title project-title">Project Two</h2>
                 <div class="btn-container">
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.twitch.tv/14s_aqfa')">
-                        Twitch
+                        blank
                     </button>
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.twitch.tv/14s_aqfa')">
                         Live Demo
@@ -222,10 +237,44 @@
                 <h2 class="experience-sub-title project-title">Project Three</h2>
                 <div class="btn-container">
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.youtube.com/@14s_aqfa')">
-                        Youtube
+                        blank
                     </button>
                     <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.youtube.com/@14s_aqfa')">
                         Live Demo
+                    </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href=('./#media')">
+    </section>
+    <section id="media">
+        <p class="section__text__p1">Look at My</p>
+        <h1 class="title">Media Platform</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+              <div class="details-container color-container">
+                <div class="article-container">
+                    <!-- Twitch Player Embed inside Project Three -->
+                    <div id="twitch-embed"></div>
+                </div>
+                <h2 class="experience-sub-title project-title"></h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.twitch.tv/14s_aqfa')">
+                        Twitch
+                    </button>
+                    </button>
+                </div>
+              </div>
+              <div class="details-container color-container">
+                <div class="article-container">
+                    <!-- Youtube Player Embed -->
+                    <div id="ytplayer" alt="Youtube Player" class="media-player"></div>
+                </div>
+                <h2 class="experience-sub-title project-title"></h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-1 project-btn" onclick="location.href=('https://www.youtube.com/@14s_aqfa')">
+                        Youtube
                     </button>
                 </div>
               </div>
@@ -255,12 +304,59 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#media">Media</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <p>Copyright &#169; AQFA. All Rights Reserved.</p>
     </footer>
+    <script>
+        // Initialize the Twitch embedded player
+        new Twitch.Embed("twitch-embed", {
+            width: "100%",
+            height: "100%",
+            channel: "14s_aqfa", // Replace with your Twitch channel name
+            layout: "video", // Options: 'video' or 'chat'
+            autoplay: false,  // Set to false if you don't want autoplay
+            muted: false     // Set to true if you want muted by default
+        });
+    </script>
+    <script>
+        // Load the IFrame Player API code asynchronously
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+        // Create a YouTube player after the API code downloads
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('ytplayer', {
+                height: '360',
+                width: '640',
+                videoId: '4UufjYhgWps', // Replace with your video ID
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+    
+        // The API will call this function when the video player is ready
+        function onPlayerReady(event) {
+            // Optionally, you can play the video automatically
+            // event.target.playVideo();
+        }
+    
+        // The API calls this function when the player's state changes
+        function onPlayerStateChange(event) {
+            // You can handle different states here
+            if (event.data == YT.PlayerState.PLAYING) {
+                console.log("Video is playing");
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

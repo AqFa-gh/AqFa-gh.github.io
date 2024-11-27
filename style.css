@@ -382,7 +382,7 @@ article.icon {
     position: relative;
 }
 
-.color-containor {
+.color-container {
     border-color: rgb(163, 163, 163);
     background: rgb(255, 255, 255);
 }
@@ -391,6 +391,46 @@ article.icon {
     border-radius: 2rem;
     width: 90%;
     height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* MEDIA SECTION */
+
+#media {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(255, 255, 255);
+}
+
+/* Twitch player container */
+#twitch-embed {
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    max-width: 640px; /* Adjust as needed */
+    height: 360px;    /* Adjust as needed */
+}
+
+.media-player {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+    max-width: 640px; /* Adjust as needed */
+    height: 360px;    /* Adjust as needed */
+    /*margin: auto;*/
 }
 
 .project-title {
