@@ -8,6 +8,13 @@
 }
 
 body {
+    /*background-color: #ffffff;*/
+    background-image: url('/assets/bg.png'); /* Replace with your image path */
+    background-size: cover;                /* Ensures the image covers the entire background */
+    background-repeat: no-repeat;          /* Prevents the image from repeating */
+    background-position: center;           /* Centers the image */
+    background-attachment: fixed;
+
     .poppins-light {
         font-family: "Poppins", sans-serif;
         font-weight: 300;
@@ -39,7 +46,7 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(0, 0, 0);
 }
 
 /* TRANSITION */
@@ -50,6 +57,18 @@ a, .btn {
 
 /* DESKTOP NAV*/
 
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 48px;
+    background-color: rgba(255, 255, 255, 0.75); /* Blue color */
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+    height: 32px; /* Adjust this value for the desired height */
+    box-sizing: inherit; /* Ensure padding is included in height calculation */
+}
+
 nav, .nav-links {
     display: flex;
 }
@@ -57,7 +76,7 @@ nav, .nav-links {
 nav {
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 16vh;
 }
 
 .nav-links {
@@ -84,10 +103,8 @@ a:hover {
 }
 
 .logo:hover {
-    cursor: default;
+    cursor: pointer;
 }
-
-/* HAMBURGER MENU */
 
 #hamburger-nav {
     display: none;
@@ -111,18 +128,20 @@ a:hover {
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
     position: absolute;
     top: 100%;
     right: 0%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
 }
 
 .menu-links a {
@@ -132,7 +151,7 @@ a:hover {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -167,12 +186,18 @@ a:hover {
     transform: none;
 }
 
+@media (max-width: 768px) {
+    #hamburger-nav {
+        display: block;
+    }
+}
+
 /* SECTIONS */
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    padding: 4rem 2rem;
     margin: 0 10rem;
+    height: 60rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
@@ -187,7 +212,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
+    height: 60rem;
 }
 
 .section__pic-container {
@@ -200,6 +225,7 @@ section {
 .section__text {
     align-self: center;
     text-align: center;
+    color: white;
 }
 
 .section__text p {
@@ -218,6 +244,8 @@ section {
 .title {
     font-size: 3rem;
     text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 #socials-container {
@@ -232,6 +260,10 @@ section {
 .icon {
     cursor: pointer;
     height: 2rem;
+}
+
+.bigger-icon {
+    height: 2.5rem;
 }
 
 /* BUTTONS */
@@ -251,7 +283,7 @@ section {
 }
 
 .btn-color-1, .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: rgb(77, 72, 72) 0.1rem solid;
 }
 
 .btn-color-1:hover, .btn-color-2:hover {
@@ -259,7 +291,7 @@ section {
 }
 
 .btn-color-2, .btn-color-1:hover {
-    background: rgb(53, 53, 53);
+    background: rgba(0, 0, 0, 0.75);
     color: white;
 }
 
@@ -320,22 +352,26 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-color: rgb(255, 255, 255);
     text-align: center;
 }
 
 .section-container {
     gap: 4rem;
-    height: 80%;
+    height: 60%;
 }
 
 .section__pic-container {
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+.about-icon {
+    cursor: default;
 }
 
 /* SKILL SECTION */
@@ -345,7 +381,7 @@ section {
 }
 
 .skill-sub-title {
-    color: rgb(85, 85, 85);
+    color: rgb(0, 0, 0);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -372,7 +408,7 @@ article {
     gap: 0.5rem;
 }
 
-article.icon {
+article .icon {
     cursor: default;
 }
 
@@ -400,7 +436,7 @@ article.icon {
 
 .project-btn {
     color: black;
-    border-color: rgb(163, 163, 163);
+    border-color: rgb(255, 255, 255);
 }
 
 /* MEDIA SECTION */
@@ -410,8 +446,8 @@ article.icon {
 }
 
 .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 /* Twitch player container */
@@ -458,8 +494,8 @@ article.icon {
     justify-content: center;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    background: (250, 250, 250);
+    border-color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.25);
     margin: 2rem auto;
     padding: 0.5rem;
     gap: 0.25rem;
@@ -479,10 +515,6 @@ article.icon {
 
 .contact-icon {
     cursor: default;
-}
-
-.email-icon {
-    height: 2.5rem;
 }
 
 /* FOOTER SECTION */
