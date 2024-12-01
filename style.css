@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,31 +15,7 @@ body {
     background-repeat: no-repeat;          /* Prevents the image from repeating */
     background-position: center;           /* Centers the image */
     background-attachment: fixed;
-
-    .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-      .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-      .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      
-      .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-      }
-      
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -48,6 +25,12 @@ html {
 p {
     color: rgb(0, 0, 0);
 }
+
+/* FONT CLASSES */
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
 
 /* TRANSITION */
 
@@ -59,30 +42,26 @@ a, .btn {
 
 header {
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
     padding: 12px 48px;
-    background-color: rgba(255, 255, 255, 0.75); /* Blue color */
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 0rem 0rem 1.5rem 1.5rem;
     height: 32px; /* Adjust this value for the desired height */
-    box-sizing: inherit; /* Ensure padding is included in height calculation */
-}
-
-nav, .nav-links {
-    display: flex;
 }
 
 nav {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     height: 16vh;
 }
 
 .nav-links {
+    display: flex;
     gap: 2rem;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 a {
@@ -99,10 +78,7 @@ a:hover {
 }
 
 .logo {
-    font-size: 2rem;
-}
-
-.logo:hover {
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -174,7 +150,7 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
+/*.hamburger-icon span:first-child {
     transform: none;
 }
 
@@ -184,7 +160,7 @@ a:hover {
 
 .hamburger-icon span:first-child {
     transform: none;
-}
+}*/
 
 @media (max-width: 768px) {
     #hamburger-nav {
@@ -198,12 +174,13 @@ section {
     padding: 4rem 2rem;
     margin: 0 10rem;
     height: 60rem;
-    box-sizing: border-box;
     min-height: fit-content;
 }
 
 .section-container {
     display: flex;
+    gap: 4rem;
+    height: 60%;
 }
 
 /* PROFILE SECTION */
@@ -226,6 +203,7 @@ section {
     align-self: center;
     text-align: center;
     color: white;
+    font-weight: 600;
 }
 
 .section__text p {
@@ -276,7 +254,6 @@ section {
 
 .btn {
     font-weight: 600;
-    transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
@@ -318,9 +295,9 @@ section {
 }
 
 .about-containers {
+    display: flex;
     gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 .about-details-container {
